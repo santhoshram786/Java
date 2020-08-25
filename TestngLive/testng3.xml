@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test-Suite">
+<listeners>
+<listener class-name="com.wow.ListenersConcept"/>
+</listeners>
+
+<parameter name="Username" value="Santhosh"/>
+  <test name="Group Test cases">
+  
+  	<groups>
+  	<run>
+  	<include name="Smoke"/>
+  	</run>
+  	</groups>
+	<classes>
+	<class name="com.wow.Carloan"/>
+	<class name="com.wow.Day"/>
+	<class name="com.wow.HomeLoan"/>
+	<class name="com.wow.Mobileloan"/>
+	</classes>
+	
+  </test>
+  
+</suite> <!-- Suite -->

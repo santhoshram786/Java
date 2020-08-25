@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Test-Suite]">
+  <parameter name="Username" value="Santhosh"/>
+  <listeners>
+    <listener class-name="com.wow.ListenersConcept"/>
+  </listeners>
+  <test thread-count="5" name="Group Test cases(failed)">
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.wow.Carloan">
+        <methods>
+          <include name="nag_Carloan" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.wow.Carloan -->
+    </classes>
+  </test> <!-- Group Test cases(failed) -->
+</suite> <!-- Failed suite [Test-Suite] -->

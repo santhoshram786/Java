@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test-Suite">
+  <test thread-count="5" name="New-Test">
+    <classes>
+      <class name="com.wow.Day"/>
+      <class name="com.wow.HomeLoan">
+      <methods>
+      <include name="ram_homeloan"/>
+      </methods>
+      </class>
+      
+      <class name="com.wow.Carloan"/>
+      <!-- Using regular expression we can add .* with starting word of the method ex Mobile.* -->
+      <class name="com.wow.Mobileloan">
+      <methods>
+      <exclude name="Mobile.*"/>
+      </methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+    <!-- If you want to differentiate multiple tests from the test case use below syntax -->
+    <!-- first testcase -->
+  <test name="Homeloan testcases">
+  
+  <classes>
+  <!-- if only single line of code end with /> if multiple use <test></test> -->
+  <class name="com.wow.HomeLoan"/>
+  </classes>
+  </test>
+  <!-- second testcase -->
+  <test name="Carloan testcases">
+  
+  <classes>
+  
+  <class name="com.wow.Carloan">
+  <!-- If you want to exclude a particular from the test case use below syntax -->
+  <methods>
+  
+  <exclude name="sam_Carloan"/>
+  
+  </methods>
+  
+  </class>
+  
+  </classes>
+  </test>
+  
+</suite> <!-- Suite -->
